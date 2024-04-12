@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Menu</title>
+  <style>
+    html{
+      scroll-behavior: smooth;
+    }
+    body {
+      color: #333;
+      margin: 0%;
+      padding: 0%;
+      background-color: white;
+    }
+    
+    .menu-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+      padding: 20px;
+      margin-top: 50px; 
+    }
+    
+    .menu-item {
+      padding: 20px;
+      cursor: pointer;
+      text-align: center;
+      transition: transform 0.3s ease;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .menu-item:hover {
+      transform: scale(1.05);
+    }
+    
+    .menu-item img {
+      width: 100%;
+      max-width: 200px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+    
+    .menu-item h2 {
+      margin-top: 5px;
+      font-size: 1.2em;
+      color: #8D7F60;
+    }
+
+    #title {
+      height: 100px;
+      width: 1250px;
+      background-color:white ;
+      display: flex;
+      justify-content: space-between; 
+      align-items: center; 
+    }
+
+    #logo {
+      width: 500px; 
+      height: 100px; 
+      background-image: url("logo.png");
+      background-size: contain; 
+      background-repeat: no-repeat; 
+    }
+
+    .topLink {
+      text-decoration: none;
+      font-size: 20px;
+      color: #8D7F60;
+    }
+
+    .topLink:hover {
+    text-decoration: underline;
+    }
+
+
+    #background-img {
+      position: relative;
+      margin-top: 0%;
+      height: 580px;
+      background-image: url("bg4.jpg");
+      background-size: cover; 
+      background-repeat: no-repeat;
+    }
+
+    #recipe-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      
+      padding: 20px;
+      text-align: center;
+      max-width: 80%;
+    }
+
+    #recipe-overlay h1 {
+      font-size: 60px;
+      color:white;
+      margin-bottom: 20px;
+    }
+
+    #recipe-overlay p {
+      font-size: 18px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    #get-started-btn {
+      display: block;
+      margin: 20px auto; 
+      padding: 10px 20px; 
+      font-size: 18px;
+      color: white;
+      border: 2px solid white;
+      border-radius: 5px; 
+      background-color: transparent; 
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      width:130px;
+    }
+
+    #get-started-btn:hover {
+      background-color: #333;
+      color: #fff;
+    }
+
+    #bars {
+      display: flex;
+      justify-content: flex-end; 
+      align-items: center; 
+      font-size: 46px; 
+    }
+#endsection
+{
+    height:200px;
+    padding-top: 100px;
+    
+}
+#end,#footer
+{
+    display: flex;
+}
+#end {
+  display: flex;
+  margin-left: 90px;
+  
+  flex: 1; 
+}
+#f1
+{
+    margin-left: 600px;
+}
+.end1
+{
+    margin-left: 105px;
+    margin-top: 0%;
+}
+.end{
+    margin-left: 18px;
+}
+#img3
+{
+  margin-top: 80px;
+}
+#links
+{
+    width:500px;
+    display: flex;
+    margin-left: 100px;
+    padding-left: 200px;
+    justify-content: space-between; 
+    
+}
+#chettinad
+{
+  padding-top: 40px;
+}
+#tandoori
+{
+  padding-top: 45px;
+}
+#chinese
+{
+  padding-top: 30px;
+}
+  </style>
+</head>
+<body>
+  <div id="title">
+    <div id="logo"></div>
+    <div id="links">
+      <a href="index1.html" class="topLink">Home</a>
+      <a href="#" class="topLink">About</a>
+      <a href="menu.html" class="topLink">Menu</a>
+      <a href="index.html" class="topLink">Bookings</a>
+    </div>
+    <div id="bars"></div>
+  </div>
+
+  <div id="background-img">
+    <div id="recipe-overlay">
+      <h1>Delicious Recipes</h1>
+
+      <a id="get-started-btn" href="#chettinad">GET STARTED</a>
+    </div>
+  </div>
+  
+  
+  <div class="menu-container">
+    <div class="menu-item" onclick="redirectTo('biryani.html')">
+      <img src="biryani.png" alt="Biryani">
+      <h2>Biryani</h2>
+    </div>
+    <div class="menu-item" onclick="redirectTo('chettinad.html')">
+      <img id="chettinad" src="chettinad1.png" alt="Chettinad">
+      <h2>Chettinad</h2>
+    </div>
+    <div class="menu-item" onclick="redirectTo('dosa.html')">
+      <img id="img3" src="dosa.png" alt="Dosa">
+      <h2>Dosa</h2>
+    </div>
+    <div class="menu-item" onclick="redirectTo('continental.html')">
+      <img src="continental.png" alt="Continental">
+      <h2>Continental</h2>
+    </div>
+    <div class="menu-item" onclick="redirectTo('indian.html')">
+      <img src="indian.png" alt="Indian">
+      <h2>Indian</h2>
+    </div>
+    <div class="menu-item" onclick="redirectTo('tandoori.html')">
+      <img id="tandoori" src="tandoori.png" alt="Tandoori">
+      <h2>Tandoori</h2>
+    </div>
+    <div class="menu-item" onclick="redirectTo('chinese.html')">
+      <img id="chinese" src="chinese.png" alt="Chinese">
+      <h2>Chinese</h2>
+    </div>
+
+    <div class="menu-item" onclick="redirectTo('desserts.html')">
+      <img src="desserts.png" alt="Desserts">
+      <h2>Desserts</h2>
+    </div>
+    <div class="menu-item" onclick="redirectTo('beverages.html')">
+      <img src="beverages.png" alt="Beverages">
+      <h2>Beverages</h2>
+    </div>
+  </div>
+
+  <div id="itemDetails" style="display: none;">
+    <h2 id="itemName"></h2>
+    <p id="itemDescription"></p>
+  </div>
+  <div id="endsection">
+    <div id="end">
+        <p class="end">About</p>
+        <p class="end">Menu</p>
+        <p class="end">Bookings</p>
+    </div>
+    <hr><br>
+    <div id="footer">
+        <br>
+        <div ><p class="end1"> Terms of Use | Privacy Policy</p> </div>
+        <div id="f1">&copy; 2024 Gourmet Empire. All Rights Reserved</div>
+    </div>
+  </div>
+
+  <script>
+    function redirectTo(url) {
+      window.location.href = url;
+    }
+  </script>
+  </script>
+</body>
+</html>

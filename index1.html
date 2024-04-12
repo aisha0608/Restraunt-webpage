@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restraunt web page</title>
+    <link rel="stylesheet" href="mystyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <div id="title">
+        <div id="logo"></div>
+        <div id="links">
+            <a href="#" class="topLink">Home</a>
+            <a href="#" class="topLink">About</a>
+            <a href="menu.html" class="topLink">Menu</a>
+            <a href="index.html" class="topLink">Bookings</a>
+        </div>
+        
+        
+        <div id="bars"></div>
+    </div>
+    
+    <div id="background-img"> </div>
+    <div id="section2">
+        <img id="img2" src="default-image.jpg" alt="Image"></a>
+        <div id="text">
+            <div id="text1"> 
+                <p id="subh1">Dive into a World of Culinary Splendor.</p><br><br>
+                <p id="text">From Lavish Brunches to Majestic Happy Hours, Elegant Family Dinners, and Grand Celebrations, Gourmet Empire Welcomes You to a World of Culinary Majesty. Experience the Art of Choice, Fit for Royalty</p><br><br>
+            </div>
+            <div id="menu">
+                <a href="menu.html"> The Imperial Menu>></a>
+            </div>
+        </div>
+    </div>
+    <div id="section3"></div>
+    <div id="section4"></div>
+    <div id="container">
+        <div id="map"></div>
+        <div id="redDiv"></div>
+    </div>
+    <div id="section5"></div>
+    <div id="section6">
+        <img id="img2" src="chef.png" alt="Image"></a>
+        <div id="text2">
+            <div id="text3"> 
+                <p id="subh1">Discover the Regal Symphony of Culinary Delights at Gourmet Empire.</p><br><br>
+                <p id="text4"> Indulge in our exquisite dishes, crafted with precision and passion.</p><br>
+                <a id="book" href="index.html">Book Now >></a>
+            </div>
+        </div>
+    </div>
+    <div id="section7">
+        <div id="dine"><h1 id="txt1"> Let's Dine More</h1></div>
+        <div id="plate"> <img src="plate.png"></div>
+    </div>
+    <div id="endsection">
+        <div id="end">
+            <p class="end1">About</p>
+            <p class="end">Menu</p>
+            <p class="end">Bookings</p>
+        </div><br>
+        <hr><br>
+        <div id="footer">
+            <br>
+            <div ><p class="end1"> Terms of Use | Privacy Policy</p> </div>
+            <div id="f1">&copy; 2024 Gourmet Empire. All Rights Reserved</div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var images = ["food1.webp","food2.webp","food3.jpeg","food4.jpg"]; 
+        var x = 0; 
+
+        function changeImage() {
+            var img = document.getElementById("img2");
+            img.src = images[x];
+            x++;
+
+            if (x >= images.length) {
+                x = 0;
+            }
+        }
+        var timerId = setInterval(changeImage, 2300);
+        
+
+        
+
+       
+       
+    </script>
+</body>
+</html>

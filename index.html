@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Login Page</title>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+           
+            <h2>Reserve Table</h2>
+            <p>Please fill the form below accurately to enable us serve you better.</p>
+            <table>
+                <form action="#" method="post">
+                    <tr>
+                        <td>Full Name:</td>
+                        <td>
+                            <input type="text" id="Name" required></td>
+                    </tr>
+                    <tr>
+                        <td> Email:</td>
+                        <td><input type="email" id="email" name="email" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Phone:</td>
+                        <td><input type="tel" id="number" name="phone" required></td>
+                    </tr>
+                    <tr>
+                        <td> Number of Guests:</td>
+                        <td><input type="number" id="guest" name="guest" min="1" required></td>
+                    </tr>
+                    <tr>
+                        <td> Reservation:</td>
+                        <td><input type="date" id="date" name="date" required>
+                            <input type="time"></td> </td>
+                    </tr>
+                    <tr>
+                        <td>  Reservation Type:</td>
+                        <td><select id="type" name="type" >
+                            <option>Please Select</option>
+                            <option>Dinner</option>
+                            <option>VIP</option>
+                            <option>Birthday/Anniversary</option>
+                            <option>Private</option>
+                            <option>Wedding</option>
+                            <option>Corporate</option>
+                            <option>Holiday</option>
+                        </select> </td>
+                    </tr>
+                        <td>Any Special Requests:</td>
+                        <td><textarea id="request" name="request" rows="4" cols="30"></textarea></td>
+                    </tr>
+                </form>
+            </table>
+            <br>
+                
+                <button type="button" onclick="validate()">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        function validate()
+        {
+
+            var name=document.getElementById("Name").value;
+            var namepattern=/^[a-zA-Z ]+$/;
+            if(!namepattern.test(name))
+            {
+                alert("Enter valid Name");
+                return false;
+            }
+
+            var num=document.getElementById("number").value;
+            var numpattern= /^(\+91-|\+91|0)?\d{10}$/;
+
+            if(!numpattern.test(num))
+            {
+                alert("Enter valid Phone number");
+                return false;
+            }
+
+            
+            var email = document.getElementById("email").value;
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) 
+            {
+                alert("Enter a valid email address!");
+                return false;
+            }
+            window.location.href = "confrmation.html";
+        }
+    </script>
+</body>
+</html>

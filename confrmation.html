@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation Confirmation</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f8f9fa; 
+            background-image: url("bg5.jpg");
+            background-size: contain;
+
+        }
+
+        .box {
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: rgba(255,255,255,0.7);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="confirmation-container">
+        <div class="box">
+            <h2>Reservation Confirmed!</h2>
+            <p>Your token number is: <span id="tokenNumber"></span></p>
+        </div>
+    </div>
+
+    <script>
+        var tokenNumber = Math.floor(100 + Math.random() * 900);
+        document.getElementById("tokenNumber").textContent = tokenNumber;
+    </script>
+</body>
+</html>
